@@ -3,6 +3,9 @@ uuid = "b70ae43e-8b10-498b-8b78-d7ac4377d41d"
 authors = ["davibarreira <davisbarreira@gmail.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+VegaLite = "112f6efa-9a02-5b7d-90c0-432ed331239a"
+
 [compat]
 julia = "1"
 
