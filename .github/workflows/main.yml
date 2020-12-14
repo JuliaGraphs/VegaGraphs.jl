@@ -22,9 +22,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
-      - uses: julia-actions/setup-julia@latest
-          with:
-            version: 1.5
-      - uses: julia-actions/julia-buildpkg@latest
-      - uses: julia-actions/julia-runtest@latest
+      - uses: actions/checkout@v1.0.0
+      - uses: julia-actions/setup-julia@v1
+        with:
+          version: 1.0.4
+      - run: julia -e 'println("Hello, World!")'
+      # - uses: actions/checkout@v2
+      # - uses: julia-actions/setup-julia@latest
+          # with:
+            # version: 1.5
+      # - uses: julia-actions/julia-buildpkg@latest
+      # - uses: julia-actions/julia-runtest@latest
