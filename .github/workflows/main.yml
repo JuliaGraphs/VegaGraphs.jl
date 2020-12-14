@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@v1.0.0
       - uses: julia-actions/setup-julia@v1
         with:
-          version: 1.0.4
+          version: 1.5.3
       - run: julia -e 'println("Hello, World!")'
       # - uses: actions/checkout@v2
       # - uses: julia-actions/setup-julia@latest
