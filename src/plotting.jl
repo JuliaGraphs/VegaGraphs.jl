@@ -4,10 +4,12 @@ using DataStructures
 vl_graph_plot(
     df_nodes,
     df_edges,
+    tooltip          = true,
+    node_size        = 500,
     node_color       = "#9ecae9",
-    node_size_field  = nothing,
-    node_color_field = nothing,
-    node_color_scheme= "blues",
+    node_sizefield  = nothing,
+    node_colorfield = nothing,
+    node_colorscheme= "blues",
     node_opacity     = 0.9,
     edge_opacity     = 0.5,
     width            = 600,
@@ -19,12 +21,12 @@ Contains the VegaLite specification for producing the plot.
 function vl_graph_plot(
     graph_nodes,
     graph_edges;
-    tooltip          = nothing,
+    tooltip          = true,
     node_size        = 500,
     node_color       = "#9ecae9",
-    node_size_field  = nothing,
-    node_color_field = nothing,
-    node_color_scheme= "blues",
+    node_sizefield  = nothing,
+    node_colorfield = nothing,
+    node_colorscheme= "blues",
     node_opacity     = 0.9,
     edge_opacity     = 0.5,
     width            = 600,
@@ -45,8 +47,8 @@ function vl_graph_plot(
         #  tooltip={field="keywords","type"="nominal"},
         x={"node_x:q",axis=nothing},
         y={"node_y:q",axis=nothing},
-        size={field=node_size_field,legend=nothing},
-        color={field=node_color_field, scale={scheme=node_color_scheme}},
+        size={field=node_sizefield,legend=nothing},
+        color={field=node_colorfield, scale={scheme=node_colorscheme}},
         width=width,
         height=height,
         selection={
@@ -78,13 +80,13 @@ function vl_graph_plot(
 
 
     # Adjusting fields to avoid warnings when plotting
-    if tooltip != nothing
+    if tooltip == true
       v1.layer[1]["encoding"]["tooltip"] = OrderedDict[OrderedDict("field"=>"keywords","type"=>"nominal")]
     end
-    if node_size_field  == nothing
+    if node_sizefield  == nothing
         delete!(v1.layer[1]["encoding"],"size")
     end
-    if node_color_field == nothing
+    if node_colorfield == nothing
         delete!(v1.layer[1]["encoding"],"color")
     end
 

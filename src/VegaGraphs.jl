@@ -10,13 +10,29 @@ include("plotting.jl")
 
 
 """
-graphplot(df)
-**df** is an adjencency matrix.
+graphplot(df, layout = GraphPlot.spring_layout; kwargs...)
+
+Input:
+* df is an adjencency matrix.
+* layout is a GraphPlot layout function (e.g GraphPlot.circular_layout)
+
 This function produces an standard graph plot.
+The possible arguments to be used are the following:
+
+* tooltip          = true  - Show node id
+* node_size        = 500
+* node_color       = "#9ecae9"
+* node_sizefield   = nothing
+* node_colorfield  = nothing
+* node_colorscheme = "blues"
+* node_opacity     = 0.9
+* edge_opacity     = 0.5
+* width            = 600
+* height           = 400
 """
-function graphplot(df; kwargs...)
+function graphplot(df, layout = GraphPlot.spring_layout; kwargs...)
     g,ew = gen_graph(df)
-    node_x, node_y = GraphPlot.spring_layout(g)
+    node_x, node_y = layout(g)
     graph_edges = get_edges(g,node_x,node_y);
     graph_nodes = DataFrame(keywords = names(df),node_x=node_x,node_y=node_y);
 
