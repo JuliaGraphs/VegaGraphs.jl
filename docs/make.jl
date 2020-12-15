@@ -6,6 +6,6 @@ using Documenter
 makedocs(sitename="VegaGraphs")
 
 deploydocs(;
-    repo="github.com/davibarreira/VegaGraphs.jl",
+    repo="github.com/davibarreira/VegaGraphs.jl.git",
 )
 
