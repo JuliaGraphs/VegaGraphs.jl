@@ -10,5 +10,12 @@ alt="Gadfly Logo" width="310"></img> </div>
 
 This library is built on top of the [JuliaGraphs](https://github.com/JuliaGraphs) project.
 
+## Desired Features
+- [ ] Graph visulization with interactivity;
+- [ ] Allow to tweak node size, node color, node shape, edge size;
+- [ ] Plot degree distribution;
+- [ ] Interactivity between related graphs (e.g. papers vs authors networks);
+- [ ] Interactivity between Plot and Graph (e.g. Degree distribution and Graph);
+
 [gha-img]: https://github.com/davibarreira/VegaGraphs.jl/workflows/CI/badge.svg
 [gha-url]: https://github.com/davibarreira/VegaGraphs.jl/actions?query=workflow%3ACI
