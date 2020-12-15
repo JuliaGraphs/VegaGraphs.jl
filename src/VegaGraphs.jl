@@ -18,14 +18,15 @@ Input:
 
 This function produces an standard graph plot.
 The possible arguments to be used are the following:
-
-* tooltip          = true  - Show node id
+* node_label       = true
+* node_labelsize   = 10
+* tooltip          = true
 * node_size        = 500
 * node_color       = "#9ecae9"
 * node_sizefield   = nothing
 * node_colorfield  = nothing
 * node_colorscheme = "blues"
-* node_opacity     = 0.9
+* node_opacity     = 1.0
 * edge_opacity     = 0.5
 * width            = 600
 * height           = 400

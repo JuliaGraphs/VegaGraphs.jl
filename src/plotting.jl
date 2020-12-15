@@ -4,34 +4,38 @@ using DataStructures
 vl_graph_plot(
     df_nodes,
     df_edges,
+    node_label       = true,
+    node_labelsize   = 10,
     tooltip          = true,
     node_size        = 500,
     node_color       = "#9ecae9",
-    node_sizefield  = nothing,
-    node_colorfield = nothing,
-    node_colorscheme= "blues",
-    node_opacity     = 0.9,
+    node_sizefield   = nothing,
+    node_colorfield  = nothing,
+    node_colorscheme = "blues",
+    node_opacity     = 1.0,
     edge_opacity     = 0.5,
     width            = 600,
     height           = 400
     )
-
 Contains the VegaLite specification for producing the plot.
 """
 function vl_graph_plot(
     graph_nodes,
     graph_edges;
+    node_label       = true,
+    node_labelsize   = 10,
     tooltip          = true,
     node_size        = 500,
     node_color       = "#9ecae9",
-    node_sizefield  = nothing,
-    node_colorfield = nothing,
-    node_colorscheme= "blues",
-    node_opacity     = 0.9,
+    node_sizefield   = nothing,
+    node_colorfield  = nothing,
+    node_colorscheme = "blues",
+    node_opacity     = 1.0,
     edge_opacity     = 0.5,
     width            = 600,
     height           = 400
     )
+
   # vegalite.jl plotting specification
   # v1 - plotting nodes
     v1 =@vlplot(
@@ -58,13 +62,14 @@ function vl_graph_plot(
                     }}
         },
     {
-        mark={"type"=:text,clip=false,opacity=1,size=10},
+        mark={"type"=:text,clip=false,opacity=1,size=node_labelsize},
         x={"node_x:q",axis=nothing},
         y={"node_y:q",axis=nothing},
         text={"keywords","type"="nominal"}
     }]
     )
-#
+
+
   # v2 - plotting edges
     v2 =@vlplot(
         mark={"type"=:line,color="gray",clip=false,size=0.8,opacity=edge_opacity},
@@ -83,6 +88,11 @@ function vl_graph_plot(
     if tooltip == true
       v1.layer[1]["encoding"]["tooltip"] = OrderedDict[OrderedDict("field"=>"keywords","type"=>"nominal")]
     end
+
+    if node_label == false
+      deleteat!(v1.layer,2)
+    end
+
     if node_sizefield  == nothing
         delete!(v1.layer[1]["encoding"],"size")
     end
