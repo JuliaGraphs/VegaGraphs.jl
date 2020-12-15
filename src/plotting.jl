@@ -1,3 +1,5 @@
+using DataStructures
+
 """
 vl_graph_plot(
     df_nodes,
@@ -17,6 +19,7 @@ Contains the VegaLite specification for producing the plot.
 function vl_graph_plot(
     graph_nodes,
     graph_edges;
+    tooltip          = nothing,
     node_size        = 500,
     node_color       = "#9ecae9",
     node_size_field  = nothing,
@@ -39,7 +42,7 @@ function vl_graph_plot(
               color=node_color},
         # There is some bug with VegaLite
         # when trying to put [] aroung tooltip
-        tooltip={field="keywords","type"="nominal"},
+        #  tooltip={field="keywords","type"="nominal"},
         x={"node_x:q",axis=nothing},
         y={"node_y:q",axis=nothing},
         size={field=node_size_field,legend=nothing},
@@ -72,6 +75,19 @@ function vl_graph_plot(
         width=width,
         height=height,
     );
+
+
+    # Adjusting fields to avoid warnings when plotting
+    if tooltip != nothing
+      v1.layer[1]["encoding"]["tooltip"] = OrderedDict[OrderedDict("field"=>"keywords","type"=>"nominal")]
+    end
+    if node_size_field  == nothing
+        delete!(v1.layer[1]["encoding"],"size")
+    end
+    if node_color_field == nothing
+        delete!(v1.layer[1]["encoding"],"color")
+    end
+
     graph_plot = @vlplot(view={stroke=nothing})+v2+v1
     return graph_plot
 end
