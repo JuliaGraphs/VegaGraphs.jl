@@ -7,6 +7,7 @@ version = "0.1.0"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 GraphPlot = "a2cc645c-3eea-5389-862e-a155d0052231"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Setfield = "efcf1570-3423-57d1-acb7-fd33fddbac46"
 SimpleWeightedGraphs = "47aef6b3-ad0c-573a-a1e2-d07658019622"
 VegaLite = "112f6efa-9a02-5b7d-90c0-432ed331239a"
 

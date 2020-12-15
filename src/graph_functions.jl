@@ -20,7 +20,7 @@ function gen_graph(df)
 
       if w > 0
             push!(ew, w)
-            add_edge!(g, i, j, w)
+            LightGraphs.add_edge!(g, i, j, w)
             push!(pairings,[i,j])
         end
 
