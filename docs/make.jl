@@ -3,9 +3,9 @@ using VegaGraphs
 
 using Documenter
 
-makedocs(sitename="VegaGraphs")
+makedocs(sitename="VegaGraphs.jl")
 
 deploydocs(;
-    repo="github.com/davibarreira/VegaGraphs.jl.git",
+    repo="github.com/davibarreira/VegaGraphs.jl",
 )
 
