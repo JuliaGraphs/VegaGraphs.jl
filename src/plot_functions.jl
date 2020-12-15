@@ -1,7 +1,7 @@
 
 
 
-function vl_graph_plot(
+function vl_graphplot(
     df_nodes::DataFrame,
     df_edges::DataFrame;
     node_size        = 500,

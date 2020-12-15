@@ -15,7 +15,7 @@ include("plot_functions.jl")
                               node_x=node_x,
                               node_y=node_y);
 
-      return vl_graph_plot(graph_nodes,graph_edges)
+      return vl_graphplot(graph_nodes,graph_edges)
   end
 
 end
