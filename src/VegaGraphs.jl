@@ -37,16 +37,16 @@ function graphplot(df, layout = GraphPlot.spring_layout; kwargs...)
     graph_edges = get_edges(g,node_x,node_y);
     graph_nodes = DataFrame(keywords = names(df),node_x=node_x,node_y=node_y);
   
-    for (k,v) in kwargs
-      for field in [:node_sizefield,:node_colorfield,:edge_weightfield]
-          if k == field
-            if length(v) != size(graph_nodes)[1]
-              throw(ArgumentError(string(field)*" should be a vector with n elements equal the number of nodes"))
-            end
-            graph_nodes[k] = v
-          end
-      end
-    end
+    #  for (k,v) in kwargs
+      #  for field in [:node_sizefield,:node_colorfield,:edge_weightfield]
+          #  if k == field
+            #  if length(v) != size(graph_nodes)[1]
+              #  throw(ArgumentError(string(field)*" should be a vector with n elements equal the number of nodes"))
+            #  end
+            #  graph_nodes[k] = v
+          #  end
+      #  end
+    #  end
 
     return vl_graph_plot(graph_nodes,graph_edges;kwargs...)
 end

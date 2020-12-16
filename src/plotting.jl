@@ -22,7 +22,7 @@ Contains the VegaLite specification for producing the plot.
 function vl_graph_plot(
     graph_nodes,
     graph_edges;
-    ew_from_adjecency= true,
+    ew               = false,
     node_label       = true,
     node_labelsize   = 10,
     tooltip          = true,
@@ -50,11 +50,11 @@ function vl_graph_plot(
         graph_nodes[:node_colorfield] = node_colorfield
         node_colorfield = :node_colorfield
   end
-  if ew_from_adjecency == false
-    if edge_weightfield  != nothing
-          graph_edges[:ew] = edge_weightfield
-          edge_weightfield = :edge_weightfield
-    end
+
+  if edge_weightfield  != nothing
+        ew = true
+        graph_edges[:ew] = edge_weightfield
+        edge_weightfield = :edge_weightfield
   end
 
   # vegalite.jl plotting specification
@@ -97,15 +97,19 @@ function vl_graph_plot(
 
   # v2 - plotting edges
     v2 =@vlplot(
-        mark={"type"=:line,color="gray",clip=false,size=0.8,opacity=edge_opacity},
         data = graph_edges,
-        encoding={
-        x={"edges_x:q",axis=nothing},
-        y={"edges_y:q",axis=nothing},
-        size={"ew:q",legend=nothing},
-        detail={"pairs:o"}},
-        width=width,
-        height=height,
+        layer=[
+        {
+          mark={"type"=:line,color="gray",clip=false,size=0.8,opacity=edge_opacity},
+          encoding={
+          x={"edges_x:q",axis=nothing},
+          y={"edges_y:q",axis=nothing},
+          #  size={"ew:q",legend=nothing},
+          detail={"pairs:o"}},
+          width=width,
+          height=height
+        }
+              ]
     );
 
 
@@ -114,13 +118,13 @@ function vl_graph_plot(
       v1.layer[1]["encoding"]["tooltip"] = OrderedDict[OrderedDict("field"=>"keywords","type"=>"nominal")]
     end
 
+    if ew == true
+      v2.layer[1]["encoding"]["size"] = OrderedDict("field"=>"ew","type"=>"q","legend"=>nothing)
+    end
+
     if node_label == false
       deleteat!(v1.layer,2)
     end
-
-    #  if ew_from_adjecency == false
-      #  deleteat!(v1.layer,2)
-    #  end
 
     if node_sizefield  == nothing
         delete!(v1.layer[1]["encoding"],"size")
