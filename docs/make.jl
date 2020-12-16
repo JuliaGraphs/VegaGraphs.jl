@@ -5,7 +5,9 @@ using Documenter
 
 makedocs(
          sitename = "VegaGraphs.jl",
-         modules  = [VegaGraphs])
+         modules  = [VegaGraphs],
+         pages=[
+                "Home" => "index.md"])
 
 deploydocs(;
     repo="github.com/davibarreira/VegaGraphs.jl",
