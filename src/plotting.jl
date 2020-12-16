@@ -22,6 +22,7 @@ Contains the VegaLite specification for producing the plot.
 function vl_graph_plot(
     graph_nodes,
     graph_edges;
+    ew_from_adjecency= true,
     node_label       = true,
     node_labelsize   = 10,
     tooltip          = true,
@@ -29,12 +30,32 @@ function vl_graph_plot(
     node_color       = "#9ecae9",
     node_sizefield   = nothing,
     node_colorfield  = nothing,
+    node_sizefieldtype   = "q",
+    node_colorfieldtype  = "q",
     node_colorscheme = "blues",
     node_opacity     = 1.0,
     edge_opacity     = 0.5,
+    edge_weightfield = nothing,
     width            = 600,
     height           = 400
     )
+
+
+  # Adjusting for extra fields
+  if node_sizefield  != nothing
+        graph_nodes[:node_sizefield] = node_sizefield
+        node_sizefield = :node_sizefield
+  end
+  if node_colorfield  != nothing
+        graph_nodes[:node_colorfield] = node_colorfield
+        node_colorfield = :node_colorfield
+  end
+  if ew_from_adjecency == false
+    if edge_weightfield  != nothing
+          graph_edges[:ew] = edge_weightfield
+          edge_weightfield = :edge_weightfield
+    end
+  end
 
   # vegalite.jl plotting specification
   # v1 - plotting nodes
@@ -51,8 +72,12 @@ function vl_graph_plot(
         #  tooltip={field="keywords","type"="nominal"},
         x={"node_x:q",axis=nothing},
         y={"node_y:q",axis=nothing},
-        size={field=node_sizefield,legend=nothing},
-        color={field=node_colorfield, scale={scheme=node_colorscheme}},
+        size={field=node_sizefield,
+              type=node_sizefieldtype,
+              legend=nothing},
+        color={field=node_colorfield,
+               type=node_colorfieldtype,
+               scale={scheme=node_colorscheme}},
         width=width,
         height=height,
         selection={
@@ -92,6 +117,10 @@ function vl_graph_plot(
     if node_label == false
       deleteat!(v1.layer,2)
     end
+
+    #  if ew_from_adjecency == false
+      #  deleteat!(v1.layer,2)
+    #  end
 
     if node_sizefield  == nothing
         delete!(v1.layer[1]["encoding"],"size")
