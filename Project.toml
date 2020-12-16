@@ -13,6 +13,7 @@ SimpleWeightedGraphs = "47aef6b3-ad0c-573a-a1e2-d07658019622"
 VegaLite = "112f6efa-9a02-5b7d-90c0-432ed331239a"
 
 [compat]
+SimpleWeightedGraphs = "1.1"
 julia = "1.5"
 
 [extras]
