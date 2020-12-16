@@ -5,8 +5,8 @@ alt="Gadfly Logo" width="310"></img> </div>
 <!-- [![Build Status](https://travis-ci.com/davibarreira/VegaGraphs.jl.svg?branch=master)](https://travis-ci.com/davibarreira/VegaGraphs.jl) -->
 [![Coverage](https://codecov.io/gh/davibarreira/VegaGraphs.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/davibarreira/VegaGraphs.jl)
 [![Build Status][gha-img]][gha-url]
-[![](bad-stb)](bld-stb)
-[![](bad-dev)](bld-dev)
+[![][bag-stb]][bld-stb]
+[![][bag-dev]][bld-dev]
 
 **VegaGraphs** implements graph visualization with [Vega-Lite](https://github.com/queryverse/VegaLite.jl).
 
