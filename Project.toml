@@ -14,6 +14,9 @@ VegaLite = "112f6efa-9a02-5b7d-90c0-432ed331239a"
 
 [compat]
 DataFrames = "0.22"
+VegaLite = "2.3"
+GraphPlot = "0.4"
+DataStructures = "0.18"
 julia = "1.5"
 
 [extras]
