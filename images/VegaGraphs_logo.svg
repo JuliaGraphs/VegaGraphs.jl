@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="297mm"
+   width="210mm"
    height="210mm"
-   viewBox="0 0 297 210"
+   viewBox="0 0 210 210"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
@@ -5942,8 +5942,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.70710677"
-     inkscape:cx="494.8512"
-     inkscape:cy="372.02306"
+     inkscape:cx="240.99986"
+     inkscape:cy="369.19463"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -5971,7 +5971,7 @@
      transform="translate(0,-87)">
     <g
        id="g2154"
-       transform="matrix(1.1265248,0,0,1.1265248,-11.522871,-14.048036)">
+       transform="matrix(1.5777322,0,0,1.5777322,-119.11689,-63.004154)">
       <g
          transform="matrix(2.6249389,0,0,2.6249389,38.511656,-114.02026)"
          id="g2665">
@@ -6199,17 +6199,6 @@
           </g>
         </g>
       </g>
-      <text
-         id="text2614"
-         y="261.52341"
-         x="38.542984"
-         style="font-style:normal;font-weight:normal;font-size:18.02857399px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.45071438"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:33.6533432px;font-family:'Bangla MN';-inkscape-font-specification:'Bangla MN Bold';stroke-width:0.45071438"
-           y="261.52341"
-           x="38.542984"
-           id="tspan2612"
-           sodipodi:role="line">VegaGraphs</tspan></text>
     </g>
   </g>
 </svg>
