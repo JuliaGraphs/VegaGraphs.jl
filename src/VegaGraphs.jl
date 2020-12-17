@@ -48,6 +48,7 @@ function graphplot(df, layout = GraphPlot.spring_layout; kwargs...)
       #  end
     #  end
 
+    #  return 0
     return vl_graph_plot(graph_nodes,graph_edges;kwargs...)
 end
 
