@@ -43,18 +43,19 @@ function vl_graph_plot(
 
   # Adjusting for extra fields
   if node_sizefield  != nothing
-        graph_nodes[:node_sizefield] = node_sizefield
+        graph_nodes[!,:node_sizefield] = node_sizefield
         node_sizefield = :node_sizefield
   end
   if node_colorfield  != nothing
-        graph_nodes[:node_colorfield] = node_colorfield
+        graph_nodes[!,:node_colorfield] = node_colorfield
         node_colorfield = :node_colorfield
   end
 
   if edge_weightfield  != nothing
         ew = true
-        graph_edges[:ew] = edge_weightfield
+        graph_edges[!,:ew] = edge_weightfield
         edge_weightfield = :edge_weightfield
+        
   end
 
   # vegalite.jl plotting specification
@@ -104,7 +105,6 @@ function vl_graph_plot(
           encoding={
           x={"edges_x:q",axis=nothing},
           y={"edges_y:q",axis=nothing},
-          #  size={"ew:q",legend=nothing},
           detail={"pairs:o"}},
           width=width,
           height=height
