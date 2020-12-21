@@ -13,7 +13,7 @@ include("plotting.jl")
 graphplot(df, layout = GraphPlot.spring_layout; kwargs...)
 
 Input:
-* df is an adjencency matrix.
+* g is SimpleGraph of SimpleWeightedGraph.
 * layout is a GraphPlot layout function (e.g GraphPlot.circular_layout)
 
 This function produces an standard graph plot.
