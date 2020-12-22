@@ -6,7 +6,8 @@ arrays containing the position of the nodes.
 Return a DataFrame containing the edge information,
 such as position, pairs and weights.
 """
-function get_edges(g,node_x,node_y) edges_p1 = []
+function get_edges(g,node_x,node_y)
+    edges_p1 = []
     edges_p2 = []
     edges_w  = Float64[]
     for i in edges(g)
