@@ -13,9 +13,9 @@ alt="Gadfly Logo" width="310"></img> </div>
 This library is built on top of the [JuliaGraphs](https://github.com/JuliaGraphs) project.
 
 ## Desired Features
-- [ ] Graph visulization with interactivity;
-- [ ] Generate graph from DataFrame and generate graph from provided nodes and edges;
-- [ ] Allow to tweak node size, node color, node shape, edge size;
+- [x] Graph visulization with interactivity;
+- [x] Generate graph from DataFrame and generate graph from provided nodes and edges;
+- [x] Allow to tweak node size, node color, node shape, edge size;
 - [ ] Plot degree distribution;
 - [ ] Interactivity between related graphs (e.g. papers vs authors networks);
 - [ ] Interactivity between Plot and Graph (e.g. Degree distribution and Graph);
