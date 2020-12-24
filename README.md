@@ -11,7 +11,7 @@ alt="Gadfly Logo" width="310"></img> </div>
 **VegaGraphs** implements graph visualization with [Vega-Lite](https://github.com/queryverse/VegaLite.jl).
 
 This library is built on top of the [JuliaGraphs](https://github.com/JuliaGraphs) project.
-
+## Gallery
 ## Desired Features
 - [x] Graph visulization with interactivity;
 - [x] Generate graph from DataFrame and generate graph from provided nodes and edges;
