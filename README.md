@@ -3,7 +3,7 @@ src="https://ghcdn.rawgit.org/davibarreira/VegaGraphs.jl/master/images/VegaGraph
 alt="Gadfly Logo" width="310"></img> </div>
 
 <!-- [![Build Status](https://travis-ci.com/davibarreira/VegaGraphs.jl.svg?branch=master)](https://travis-ci.com/davibarreira/VegaGraphs.jl) -->
-[![Coverage](https://codecov.io/gh/davibarreira/VegaGraphs.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/davibarreira/VegaGraphs.jl)
+[![Coverage](https://codecov.io/gh/JuliaGraphs/VegaGraphs.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/davibarreira/VegaGraphs.jl)
 [![Build Status][gha-img]][gha-url]
 [![][bag-stb]][bld-stb]
 [![][bag-dev]][bld-dev]
