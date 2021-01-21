@@ -24,7 +24,7 @@ This library is built on top of the [JuliaGraphs](https://github.com/JuliaGraphs
 [gha-img]: https://github.com/davibarreira/VegaGraphs.jl/workflows/CI/badge.svg
 [gha-url]: https://github.com/davibarreira/VegaGraphs.jl/actions?query=workflow%3ACI
 [bag-dev]: https://img.shields.io/badge/docs-dev-blue.svg
-[bld-dev]: https://davibarreira.github.io/VegaGraphs.jl/dev 
+[bld-dev]: https://juliagraphs.org/VegaGraphs.jl/dev
 [bag-stb]: https://img.shields.io/badge/docs-stable-blue.svg
-[bld-stb]: https://davibarreira.github.io/VegaGraphs.jl/stable 
+[bld-stb]: https://juliagraphs.org/VegaGraphs.jl/stable
 
