@@ -1,5 +1,5 @@
 <div align="center"> <img
-src="https://ghcdn.rawgit.org/davibarreira/VegaGraphs.jl/master/images/VegaGraphs_logo.svg"
+src="https://github.com/JuliaGraphs/VegaGraphs.jl/blob/master/images/VegaGraphs_logo.svg"
 alt="VegaGraphs Logo" width="310"></img> </div>
 
 <!-- [![Build Status](https://travis-ci.com/davibarreira/VegaGraphs.jl.svg?branch=master)](https://travis-ci.com/davibarreira/VegaGraphs.jl) -->
