@@ -21,8 +21,8 @@ This library is built on top of the [JuliaGraphs](https://github.com/JuliaGraphs
 - [ ] Interactivity between Plot and Graph (e.g. Degree distribution and Graph);
 - [ ] **IMPLEMENT DIRECTED GRAPHS AFTER UNDIRECTED**
 
-[gha-img]: https://github.com/davibarreira/VegaGraphs.jl/workflows/CI/badge.svg
-[gha-url]: https://github.com/davibarreira/VegaGraphs.jl/actions?query=workflow%3ACI
+[gha-img]: https://github.com/JuliaGraphs/VegaGraphs.jl/workflows/CI/badge.svg
+[gha-url]: https://github.com/JuliaGraphs/VegaGraphs.jl/actions?query=workflow%3ACI
 [bag-dev]: https://img.shields.io/badge/docs-dev-blue.svg
 [bld-dev]: https://juliagraphs.org/VegaGraphs.jl/dev
 [bag-stb]: https://img.shields.io/badge/docs-stable-blue.svg
