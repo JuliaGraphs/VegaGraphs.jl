@@ -14,6 +14,7 @@ vl_graph_plot(
     node_colorscheme = "blues",
     node_opacity     = 1.0,
     edge_opacity     = 0.5,
+    edge_weightfield = nothing,
     width            = 600,
     height           = 400
     )
@@ -36,6 +37,7 @@ function vl_graph_plot(
     node_opacity     = 1.0,
     edge_opacity     = 0.5,
     edge_weightfield = nothing,
+    edge_weightfieldtype = "o",
     width            = 600,
     height           = 400
     )
@@ -75,6 +77,7 @@ function vl_graph_plot(
         y={"node_y:q",axis=nothing},
         size={field=node_sizefield,
               type=node_sizefieldtype,
+              scale={rangeMin=100},
               legend=nothing},
         color={field=node_colorfield,
                type=node_colorfieldtype,
@@ -119,7 +122,7 @@ function vl_graph_plot(
     end
 
     if ew == true
-      v2.layer[1]["encoding"]["size"] = OrderedDict("field"=>"ew","type"=>"q","legend"=>nothing)
+      v2.layer[1]["encoding"]["size"] = OrderedDict("field"=>"ew","type"=>edge_weightfieldtype,"legend"=>nothing)
     end
 
     if node_label == false

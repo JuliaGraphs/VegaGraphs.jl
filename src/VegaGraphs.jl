@@ -28,10 +28,12 @@ The possible arguments to be used are the following:
 * node_colorscheme = "blues"
 * node_opacity     = 1.0
 * edge_opacity     = 0.5
+* edge_weightfield = nothing
 * width            = 600
 * height           = 400
 """
-function graphplot(g::Union{SimpleWeightedGraph,SimpleGraph},
+# function graphplot(g::union{simpleweightedgraph,simplegraph},
+function graphplot(g::AbstractGraph,
                 layout = GraphPlot.spring_layout;node_labels=nothing,kwargs...)
     if node_labels == nothing
         node_labels = collect(vertices(g))
