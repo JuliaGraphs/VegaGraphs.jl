@@ -1,6 +1,6 @@
 <div align="center"> <img
 src="https://ghcdn.rawgit.org/davibarreira/VegaGraphs.jl/master/images/VegaGraphs_logo.svg"
-alt="Gadfly Logo" width="310"></img> </div>
+alt="VegaGraphs Logo" width="310"></img> </div>
 
 <!-- [![Build Status](https://travis-ci.com/davibarreira/VegaGraphs.jl.svg?branch=master)](https://travis-ci.com/davibarreira/VegaGraphs.jl) -->
 [![Coverage](https://codecov.io/gh/JuliaGraphs/VegaGraphs.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/JuliaGraphs/VegaGraphs.jl)
@@ -34,6 +34,9 @@ p = VegaGraphs.graphplot(g,
     node_colorfieldtype="o"
 )
 ```
+<div align="center"> <img
+src="https://github.com/JuliaGraphs/VegaGraphs.jl/tree/master/images/Example_Plot.svg"
+alt="Graph Plot"></img> </div>
 ## Desired Features
 - [x] Graph visulization with interactivity;
 - [x] Generate graph from DataFrame and generate graph from provided nodes and edges;
