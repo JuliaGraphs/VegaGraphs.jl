@@ -11,7 +11,29 @@ alt="Gadfly Logo" width="310"></img> </div>
 **VegaGraphs** implements graph visualization with [Vega-Lite](https://github.com/queryverse/VegaLite.jl).
 
 This library is built on top of the [JuliaGraphs](https://github.com/JuliaGraphs) project.
-## Gallery
+## Example of Usage
+The use of VegaGraphs is very straightforward. At the moment, the package has one main function called
+`graphplot()` that is shipped with all the possible modifications one can the do the graph visualization.
+
+```julia
+# Creating a Random Graph with SimpleWeightedGraphs
+incidence = rand([0,1],10,20)
+m = incidence'*incidence
+m[diagind(m)] .= 0.0
+g = SimpleWeightedGraph(m)
+random_nodecolor = rand([1,2,3],20)
+
+# Using VegaGraphs to create the Plot
+p = VegaGraphs.graphplot(g,
+    tooltip=true,  # Iteractive tooltips
+    ew=true,       # VegaGraphs calculate the edge weights based on the number of time the pair appears in the graph
+    node_label=false,
+    node_colorfield=random_nodecolor,
+    node_sizefield=field,
+    node_sizefieldtype="q",
+    node_colorfieldtype="o"
+)
+```
 ## Desired Features
 - [x] Graph visulization with interactivity;
 - [x] Generate graph from DataFrame and generate graph from provided nodes and edges;
