@@ -22,14 +22,14 @@ m = incidence'*incidence
 m[diagind(m)] .= 0.0
 g = SimpleWeightedGraph(m)
 random_nodecolor = rand([1,2,3],20)
-
+random_nodesize  = rand(20)
 # Using VegaGraphs to create the Plot
 p = VegaGraphs.graphplot(g,
     tooltip=true,  # Iteractive tooltips
     ew=true,       # VegaGraphs calculate the edge weights based on the number of time the pair appears in the graph
     node_label=false,
     node_colorfield=random_nodecolor,
-    node_sizefield=field,
+    node_sizefield=random_nodesize,
     node_sizefieldtype="q",
     node_colorfieldtype="o"
 )
