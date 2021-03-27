@@ -35,7 +35,7 @@ p = VegaGraphs.graphplot(g,
 )
 ```
 <div align="center"> <img
-src="https://github.com/JuliaGraphs/VegaGraphs.jl/tree/master/images/Example_Plot.svg"
+src="https://github.com/JuliaGraphs/VegaGraphs.jl/blob/master/images/Example_Plot.svg"
 alt="Graph Plot"></img> </div>
 
 ## Desired Features
