@@ -37,6 +37,7 @@ p = VegaGraphs.graphplot(g,
 <div align="center"> <img
 src="https://github.com/JuliaGraphs/VegaGraphs.jl/tree/master/images/Example_Plot.svg"
 alt="Graph Plot"></img> </div>
+
 ## Desired Features
 - [x] Graph visulization with interactivity;
 - [x] Generate graph from DataFrame and generate graph from provided nodes and edges;
