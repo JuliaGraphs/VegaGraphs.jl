@@ -16,7 +16,7 @@ VegaLite = "112f6efa-9a02-5b7d-90c0-432ed331239a"
 [compat]
 DataFrames = "0.22, 1.0"
 DataStructures = "0.17, 0.18"
-GraphPlot = "0.4"
+GraphPlot = "0.4, 0.6"
 LightGraphs = "1.3"
 MetaGraphs = "0.6"
 SimpleWeightedGraphs = "1.1"
